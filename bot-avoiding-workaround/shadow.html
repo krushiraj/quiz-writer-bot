@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Shadow DOM</title>
+        <style>
+            .question {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="question">Welcome to Shadow DOM</h1>
+        <div id="questions-list">
+            <question-answers/>
+        </div>
+    </body>
+    
+    <script src="shadow.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        navigator.clipboard.readText().then(text => {
+            console.log(text)
+            let p = document.createElement('p');
+            p.innerHTML = text;
+            document.body.appendChild(p);
+        })
+    </script>
+</html>

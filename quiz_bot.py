@@ -43,10 +43,10 @@ def write_code_to_file(code):
 def run_code(filename='sample.py'):
     from subprocess import PIPE, run
     process_output = run(
-        ['python3 '+filename], 
-        stdout=PIPE, 
-        stderr=PIPE, 
-        universal_newlines=True, 
+        ['py '+filename],
+        stdout=PIPE,
+        stderr=PIPE,
+        universal_newlines=True,
         shell=True
     )
     if process_output.returncode == 0:
@@ -121,11 +121,11 @@ def run_test_loop(driver, qb):
     while not QUIZ_ENDED:
         get_question_and_solve(driver, qb)
         go_to_next_question(driver)
-        
+
 
 def init_browser():
     #open the browser and go to quiz link
-    driver = webdriver.Firefox()
+    driver = webdriver.Chrome()
     driver.get(URL)
     return driver
 
@@ -142,7 +142,7 @@ def take_quiz():
     driver = init_browser()
     start_quiz(driver)
     run_test_loop(driver, QUESTION_BANK)
-    
+
 
 if __name__ == '__main__':
     take_quiz()

@@ -3,4 +3,4 @@ A bot written in python that writes quizzes which are required for online course
 
 -> Running `quiz_bot.py` will start the bot.
 
--> One of the way that I feel is suitable to avoid such bots to write quizzes has been shown in `bot-avoiding-worksarounds` folder
+-> I had few ideas to avoid such bots if I had a site which hosts online test, one of the efficient way that I felt was included with demo in `bot-avoiding-workarounds` folder.

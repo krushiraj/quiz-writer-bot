@@ -43,7 +43,7 @@ def write_code_to_file(code):
 def run_code(filename='sample.py'):
     from subprocess import PIPE, run
     process_output = run(
-        ['py '+filename],
+        ['python3 '+filename],
         stdout=PIPE,
         stderr=PIPE,
         universal_newlines=True,
@@ -125,7 +125,7 @@ def run_test_loop(driver, qb):
 
 def init_browser():
     #open the browser and go to quiz link
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('./chromedriver')
     driver.get(URL)
     return driver
 
